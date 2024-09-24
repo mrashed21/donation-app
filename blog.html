@@ -41,14 +41,17 @@
   </head>
   <body class="secondarybg">
     <header
-      class="backdrop-filter backdrop-blur-lg bg-opacity-10 border-b border-gray-400 sticky top-0"
+      class="backdrop-filter backdrop-blur-lg bg-opacity-10 border-b border-gray-400 sticky top-0 z-20"
     >
       <!-- navbar -->
       <nav class="container mx-auto">
         <div class="navbar justify-between">
           <!-- nav start -->
           <div class="navbar-start w-fit">
-            <button id="blog-file" class="btn primary-bg text-xl font-medium">
+            <button
+              id="blog-file"
+              class="btn primary-bg p-2 font-medium text-sm md:text-xl"
+            >
               Home
             </button>
           </div>
@@ -73,7 +76,7 @@
                 src="./assets/image/coin.png"
                 alt="logo"
               />
-              <p class="text-lg md:text-xl font-medium secondarytxt">
+              <p class="text-base md:text-xl secondarytxt">
                 <span id="initialBalance">15000</span>
                 BDT
               </p>
@@ -90,35 +93,27 @@
             What is the Document Object Model (DOM)?
           </div>
           <div class="collapse-content">
-            <p>
+            <p class="text-justify">
               The Document Object Model (DOM) connects web pages to scripts or
               programming languages by representing the structure of a document
             </p>
           </div>
         </div>
+
         <div class="collapse collapse-plus bg-base-200 shadow-md">
-          <input type="radio" name="my-accordion-3" />
+          <input type="radio" name="my-accordion-3" checked="checked" />
           <div class="collapse-title text-xl font-medium">
             How do you select an element from the DOM?
           </div>
           <div class="collapse-content">
-            <p>
+            <p class="text-justify">
               Selecting an element from the DOM (Document Object Model) in
               JavaScript can be done using several methods.
             </p>
-            <ul class="mt-3 list-decimal px-5">
-              <li>const element = document.getElementById('Id');</li>
-              <li>
-                const elements = document.getElementsByClassName('myClass');
-              </li>
-              <li>const elements = document.getElementsByTagName('div');</li>
-              <li>const element = document.querySelector('.myClass');</li>
-              <li>
-                const elements = document.querySelectorAll('div.myClass');
-              </li>
-            </ul>
+            
           </div>
         </div>
+
         <div class="collapse collapse-plus bg-base-200 shadow-md">
           <input type="radio" name="my-accordion-3" />
           <div class="collapse-title text-xl font-medium">
@@ -126,7 +121,7 @@
             DOM?
           </div>
           <div class="collapse-content">
-            <p>
+            <p class="text-justify">
               Changing an element's style (CSS) attributes is one of the ways in
               which the DOM can be used. For example, in the code below, the
               onfocus event handler method is used to change the input element's
@@ -142,7 +137,7 @@
             useful?
           </div>
           <div class="collapse-content">
-            <p>
+            <p class="text-justify">
               Event delegation refers to the process of using event propagation
               (bubbling) to handle events at a higher level in the DOM than the
               element on which the event originated. It allows us to attach a
