@@ -2,6 +2,26 @@
 let initial = document.getElementById("initialBalance").innerText;
 let initialBalance = parseFloat(initial);
 
+/* User Action */
+const historyContainer = donateSumbit("historyData");
+const userUI = donateSumbit("userUI");
+
+const uiButton = donateSumbit("uiBtn");
+uiButton.addEventListener("click", () => {
+  uiButton.classList.add("primary-bg");
+  historyButton.classList.remove("primary-bg");
+  userUI.classList.remove("hidden");
+  historyContainer.classList.add("hidden");
+});
+
+const historyButton = donateSumbit("historyBtn");
+historyButton.addEventListener("click", () => {
+  historyButton.classList.add("primary-bg");
+  uiButton.classList.remove("primary-bg");
+  historyContainer.classList.remove("hidden");
+  userUI.classList.add("hidden");
+});
+
 /*****Donate for Noakhali*****/
 const donateNoakhali = donateSumbit("donateNoakhali");
 donateNoakhali.addEventListener("click", () => {
@@ -41,5 +61,32 @@ donateNoakhali.addEventListener("click", () => {
     closePopUp.addEventListener("click", function () {
       document.getElementById("donateFailed").classList.add("hidden");
     });
+
+    /*Donation History*/
+    const timeDate = new Date();
+    const time = timeDate.toLocaleTimeString("en-US", {
+      hour: "numeric",
+      minute: "numeric",
+      hour12: true,
+    });
+    const date = timeDate.toLocaleDateString("en-US");
+    const history = document.getElementById("historyData");
+    const div = document.createElement("div");
+    div.classList.add(
+      "bg-white",
+      "shadow-md",
+      "rounded-lg",
+      "border-2",
+      "border-gray-300"
+    );
+    div.innerHTML = `<h2 class="font-medium text-xl px-4 mt-4 primary-txt">
+              ${amountNoakhali} Donate for Flood at Noakhali, Bangladesh
+            </h2>
+            <p
+              class="text-base font-light secondarytxt px-4 mb-4"
+            >
+              Time: ${time} Date: ${date}
+            </p> `;
+    history.appendChild(div);
   }
 });
