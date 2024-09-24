@@ -15,3 +15,8 @@ function donatInitial(id) {
   const donatInitialBalance = document.getElementById(id).innerText;
   return donatInitialBalance;
 }
+
+document.getElementById("blog-file").addEventListener("click", function () {
+  window.location.href = "index.html";
+  console.log("hello blog");
+});

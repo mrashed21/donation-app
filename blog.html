@@ -39,7 +39,7 @@
       }
     </style>
   </head>
-  <body>
+  <body class="secondarybg">
     <header
       class="backdrop-filter backdrop-blur-lg bg-opacity-10 border-b border-gray-400 sticky top-0"
     >
@@ -48,13 +48,9 @@
         <div class="navbar justify-between">
           <!-- nav start -->
           <div class="navbar-start w-fit">
-            <div
-              class="flex items-center cursor-pointer py-1 px-2 md:py-2 md:px-4 rounded-md primary-bg"
-            >
-              <a href="#" class="primary-txt text-base md:text-xl font-semibold"
-                >Home</a
-              >
-            </div>
+            <button id="blog-file" class="btn primary-bg text-xl font-medium">
+              Home
+            </button>
           </div>
           <!-- nav center -->
           <div class="navbar-center">
@@ -87,7 +83,7 @@
       </nav>
     </header>
     <main>
-      <section class="p-16 secondarybg space-y-3">
+      <section class="p-16 space-y-3">
         <div class="collapse collapse-plus bg-base-200 shadow-md">
           <input type="radio" name="my-accordion-3" checked="checked" />
           <div class="collapse-title text-xl font-medium">
@@ -156,5 +152,7 @@
         </div>
       </section>
     </main>
+
+    <script src="./assets/JavaScript/utilities.js"></script>
   </body>
 </html>
