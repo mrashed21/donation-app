@@ -16,7 +16,7 @@ function donatInitial(id) {
   return donatInitialBalance;
 }
 
+/* Change Page Location */
 document.getElementById("blog-file").addEventListener("click", function () {
   window.location.href = "index.html";
-  console.log("hello blog");
 });
