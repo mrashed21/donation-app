@@ -4,14 +4,157 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- DaisyUI and Tailwind -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
       rel="stylesheet"
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .lexend {
+        font-family: "Lexend", sans-serif;
+      }
+      .primary-bg {
+        background: #b4f461;
+      }
+      .secondarybg {
+        background: #f9f7f3;
+      }
+      .donatebg {
+        background: rgba(17, 17, 17, 0.05);
+      }
+      .primary-txt {
+        color: #111;
+      }
+      .secondarytxt {
+        color: rgba(17, 17, 17, 0.7);
+      }
+    </style>
   </head>
   <body>
-    <h1>hello</h1>
+    <header
+      class="backdrop-filter backdrop-blur-lg bg-opacity-10 border-b border-gray-400 sticky top-0"
+    >
+      <!-- navbar -->
+      <nav class="container mx-auto">
+        <div class="navbar justify-between">
+          <!-- nav start -->
+          <div class="navbar-start w-fit">
+            <div
+              class="flex items-center cursor-pointer py-1 px-2 md:py-2 md:px-4 rounded-md primary-bg"
+            >
+              <a href="#" class="primary-txt text-base md:text-xl font-semibold"
+                >Home</a
+              >
+            </div>
+          </div>
+          <!-- nav center -->
+          <div class="navbar-center">
+            <div class="flex items-center gap-2 md:gap-3">
+              <img
+                class="w-7 md:w-10"
+                src="./assets/image/logo.png"
+                alt="logo"
+              />
+              <p class="primary-txt text-base md:text-xl font-semibold">
+                Donate Bangladesh
+              </p>
+            </div>
+          </div>
+          <!-- nav end -->
+          <div class="navbar-end w-fit">
+            <div class="flex items-center gap-1 md:gap-2">
+              <img
+                class="w-6 md:w-9"
+                src="./assets/image/coin.png"
+                alt="logo"
+              />
+              <p class="text-lg md:text-xl font-medium secondarytxt">
+                <span id="initialBalance">15000</span>
+                BDT
+              </p>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="p-16 secondarybg space-y-3">
+        <div class="collapse collapse-plus bg-base-200 shadow-md">
+          <input type="radio" name="my-accordion-3" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            What is the Document Object Model (DOM)?
+          </div>
+          <div class="collapse-content">
+            <p>
+              The Document Object Model (DOM) connects web pages to scripts or
+              programming languages by representing the structure of a document
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-plus bg-base-200 shadow-md">
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title text-xl font-medium">
+            How do you select an element from the DOM?
+          </div>
+          <div class="collapse-content">
+            <p>
+              Selecting an element from the DOM (Document Object Model) in
+              JavaScript can be done using several methods.
+            </p>
+            <ul class="mt-3 list-decimal px-5">
+              <li>const element = document.getElementById('Id');</li>
+              <li>
+                const elements = document.getElementsByClassName('myClass');
+              </li>
+              <li>const elements = document.getElementsByTagName('div');</li>
+              <li>const element = document.querySelector('.myClass');</li>
+              <li>
+                const elements = document.querySelectorAll('div.myClass');
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="collapse collapse-plus bg-base-200 shadow-md">
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title text-xl font-medium">
+            How do you manipulate an element's attributes and styles using the
+            DOM?
+          </div>
+          <div class="collapse-content">
+            <p>
+              Changing an element's style (CSS) attributes is one of the ways in
+              which the DOM can be used. For example, in the code below, the
+              onfocus event handler method is used to change the input element's
+              style when the user clicks inside it. When this event occurs, the
+              element's background color will change to purple.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-plus bg-base-200 shadow-md">
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title text-xl font-medium">
+            What is event delegation in the context of the DOM, and why is it
+            useful?
+          </div>
+          <div class="collapse-content">
+            <p>
+              Event delegation refers to the process of using event propagation
+              (bubbling) to handle events at a higher level in the DOM than the
+              element on which the event originated. It allows us to attach a
+              single event listener for elements that exist now or in the future
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
